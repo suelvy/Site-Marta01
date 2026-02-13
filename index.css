@@ -2,32 +2,33 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #939191;
+  color: #7d7676;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 /* HEADER */
 .header {
-  background: #0a8754;
-  color: rgb(199, 194, 194);
+  background: #0a8754;;
+  color: rgb(225, 213, 213);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.header nav{
+  margin-top: 15px;
+}
 .header a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: bold;
+  display:block;
+  margin: 10px 0;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(to right, #0a8754, #2bb673);
-  color: white;
+  background: linear-gradient(to right, #0c281d, #2bb673);
+  color: rgb(241, 233, 233);
   padding: 80px 20px;
   text-align: center;
 }
@@ -35,8 +36,8 @@ body {
 .hero .btn {
   display: inline-block;
   margin-top: 20px;
-  background: white;
-  color: #0a8754;
+  background: rgb(208, 202, 202);
+  color: #13b27d;
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 5px;
@@ -51,7 +52,7 @@ section {
 }
 
 h2 {
-  color: #0a8754;
+  color: #074936;
 }
 
 /* LISTA */
@@ -61,7 +62,7 @@ ul {
 }
 
 ul li {
-  background: #f4f4f4;
+  background: #d6d1d1;
   margin: 10px 0;
   padding: 15px;
   border-left: 5px solid #0a8754;
@@ -118,8 +119,6 @@ footer {
 }
 
 img{
-    width: 1000px;
-    height: 400px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -127,4 +126,63 @@ img{
 
 .center{
     text-align: center;
+}
+.menu-toggle {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-toggle span{
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+nav {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #138052;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: rgb(250, 247, 247);
+    text-decoration: none;
+    font-weight: bold;
+}
+nav{
+  display: none;
+}
+nav.active{
+  display: block;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
