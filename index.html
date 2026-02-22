@@ -1,77 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energia Renovavél Marta</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.martaenergia.co.mz/">
+    <meta property="og:title" content="Marta Energia Renovável | Soluções Sustentáveis">
+    <meta property="og:description" content="Soluções modernas em energia solar e renovável para residências e empresas. Reduza até 70% da sua fatura elétrica.">
+    <meta property="og:image" content="https://www.martaenergia.co.mz/img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.martaenergia.co.mz/">
+    <meta property="twitter:title" content="Marta Energia Renovável | Soluções Sustentáveis">
+    <meta property="twitter:description" content="Soluções modernas em energia solar e renovável para residências e empresas.">
+    <meta property="twitter:image" content="https://www.martaenergia.co.mz/img/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"> 
+
+    <!-- SEO -->
+    <title>Marta Energia Renovável | Soluções Sustentáveis</title>
+    <meta name="description" content="Soluções modernas em energia solar e renovável para residências e empresas. Reduza até 70% da sua fatura elétrica com a Marta Energia Renovável.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
 </head>
 <body>
+
+    <!-- ================= HEADER ================= -->
     <header class="header">
-        <div class="logo">Marta energia</div>
-         <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+        <div class="container header-container">
+            <h1 class="logo">Marta Energia</h1>
 
-    <nav id="menu">
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+            <!-- Hamburger Icon -->
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Menu Overlay -->
+            <div class="menu-overlay" id="menu-overlay"></div>
+
+            <!-- Menu Navigation -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link" data-lang="pt">Início</a><a href="#inicio" class="nav-link" data-lang="en">Home</a></li>
+                    <li><a href="#sobre" class="nav-link" data-lang="pt">Sobre</a><a href="#sobre" class="nav-link" data-lang="en">About</a></li>
+                    <li><a href="#servicos" class="nav-link" data-lang="pt">Serviços</a><a href="#servicos" class="nav-link" data-lang="en">Services</a></li>
+                    <li><a href="#galeria" class="nav-link" data-lang="pt">Projetos</a><a href="#galeria" class="nav-link" data-lang="en">Projects</a></li>
+                    <li><a href="#contacto" class="nav-link nav-btn" data-lang="pt">Contacto</a><a href="#contacto" class="nav-link nav-btn" data-lang="en">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+
+    <!-- ================= MAIN ================= -->
     <main>
-        <!-- HERO -->
-         <section id="inicio" class="hero">
-            <h2>Energia Limpa Para Um Futuro Sustentável</h2>
-            <p>Soluções modernas em energia renovável para residências e empresas.</p>
-            <p>Descubra nossos projetos solares e eólicos off-grid, com redução de custos até 70% na fatura elétrica e contributo para o combate às mudanças climáticas.</p>
-            <a href="=#contacto" class="bnt">Fale Conosco</a>
-            <header>
-                <div class="center"></div>
-                    <img src="./img/marta.png.webp"></header>
+
+        <!-- ================= HERO COM VÍDEO ================= -->
+        <section id="inicio" class="hero-video">
+            <video class="video-background" autoplay muted loop playsinline>
+                <source src="./img/video-paineis.mp4" type="video/mp4">
+                Teu browser não suporta vídeo HTML5.
+            </video>
+            
+            <div class="overlay"></div>
+
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2 data-lang="pt">Energia Limpa para um Futuro Sustentável</h2>
+                    <h2 data-lang="en">Clean Energy for a Sustainable Future</h2>
+                    
+                    <p data-lang="pt">Soluções modernas em energia solar e sistemas renováveis para residências e empresas.</p>
+                    <p data-lang="en">Modern solutions in solar energy and renewable systems for homes and businesses.</p>
+                    
+                    <p data-lang="pt">Reduza até 70% da sua fatura elétrica com projetos eficientes, sustentáveis e personalizados.</p>
+                    <p data-lang="en">Reduce your electricity bill by up to 70% with efficient, sustainable and customized projects.</p>
+                    
+                    <a href="#contacto" class="btn-primary" data-lang="pt">Solicitar Orçamento</a>
+                    <a href="#contacto" class="btn-primary" data-lang="en">Request Quote</a>
                 </div>
-            </header>
-         </section>
 
-         <!--SOBRE-->
-         <section id="sobre">
-            <h2>Sobre a Empresa</h2>
-            <p>
-                A Marta Energia Renovável é uma empresa jovem e inovadora,
-      focada em soluções sustentáveis que reduzem custos e
-      protegem o meio ambiente.
-            </p>
-         </section>
+                <div class="hero-image">
+                    <!-- Imagem opcional -->
+                </div>
+            </div>
+        </section>
 
-         <!--SERVIÇOS-->
-         <section id="servicos">
-            <h2>Nossos Serviços</h2>
-            <ul>
-                <li>Instalação de painéis solares</li>
-                <li>Manutenção de sistemas solares</li>
-                <li>Consultoria em energia renovável</li>
-                <li>Progetos personalizados</li>
-            </ul>
-         </section>
+        <!-- ================= CARROSSEL SERVIÇOS ================= -->
+        <section class="carrossel-section">
+            <div class="container">
+                <h2 class="section-title" data-lang="pt">Nossas Soluções</h2>
+                <h2 class="section-title" data-lang="en">Our Solutions</h2>
+                
+                <div class="carrossel-container">
+                    <div class="carrossel-slides">
+                        <!-- Slide 1 - Residencial -->
+                        <div class="carrossel-slide active">
+                            <div class="carrossel-content">
+                                <div class="carrossel-texto">
+                                    <h3 data-lang="pt">Energia Solar Residencial</h3>
+                                    <h3 data-lang="en">Residential Solar Energy</h3>
+                                    
+                                    <ul class="carrossel-lista" data-lang="pt">
+                                        <li>⚡ Painéis de alta eficiência</li>
+                                        <li>💰 Redução até 70% na conta</li>
+                                        <li>📱 Monitorização pelo smartphone</li>
+                                    </ul>
+                                    <ul class="carrossel-lista" data-lang="en">
+                                        <li>⚡ High efficiency panels</li>
+                                        <li>💰 Up to 70% bill reduction</li>
+                                        <li>📱 Smartphone monitoring</li>
+                                    </ul>
+                                    
+                                    <a href="#contacto" class="btn-carrossel" data-lang="pt">Solicitar Orçamento</a>
+                                    <a href="#contacto" class="btn-carrossel" data-lang="en">Request Quote</a>
+                                </div>
+                                <div class="carrossel-imagem">
+                                    <img src="./img/solar-residencial.jpg" alt="Casa com painéis solares" onerror="this.src='./img/placeholder.svg'">
+                                </div>
+                            </div>
+                        </div>
 
-         <!--CONTACTO-->
-         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>📞 WhatsApp: +258 84 717 4400</p>
-            <p>📧 Email: contacto@martaenergia.co.mz</p>
-         </section>
+                        <!-- Slide 2 - Empresarial -->
+                        <div class="carrossel-slide">
+                            <div class="carrossel-content">
+                                <div class="carrossel-texto">
+                                    <h3 data-lang="pt">Soluções Empresariais</h3>
+                                    <h3 data-lang="en">Business Solutions</h3>
+                                    
+                                    <ul class="carrossel-lista" data-lang="pt">
+                                        <li>🏢 Projetos para indústrias</li>
+                                        <li>💳 Financiamento personalizado</li>
+                                        <li>🔧 Manutenção preventiva</li>
+                                    </ul>
+                                    <ul class="carrossel-lista" data-lang="en">
+                                        <li>🏢 Industrial projects</li>
+                                        <li>💳 Customized financing</li>
+                                        <li>🔧 Preventive maintenance</li>
+                                    </ul>
+                                    
+                                    <a href="#contacto" class="btn-carrossel" data-lang="pt">Falar com Especialista</a>
+                                    <a href="#contacto" class="btn-carrossel" data-lang="en">Talk to Specialist</a>
+                                </div>
+                                <div class="carrossel-imagem">
+                                    <img src="./img/solar-empresarial.jpeg" alt="Empresa com painéis solares" onerror="this.src='./img/placeholder.svg'">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 - Híbrido -->
+                        <div class="carrossel-slide">
+                            <div class="carrossel-content">
+                                <div class="carrossel-texto">
+                                    <h3 data-lang="pt">Sistemas Híbridos</h3>
+                                    <h3 data-lang="en">Hybrid Systems</h3>
+                                    
+                                    <ul class="carrossel-lista" data-lang="pt">
+                                        <li>🔋 Baterias de longa duração</li>
+                                        <li>⚡ Backup automático</li>
+                                        <li>🌙 Energia mesmo à noite</li>
+                                    </ul>
+                                    <ul class="carrossel-lista" data-lang="en">
+                                        <li>🔋 Long-life batteries</li>
+                                        <li>⚡ Automatic backup</li>
+                                        <li>🌙 Energy even at night</li>
+                                    </ul>
+                                    
+                                    <a href="#contacto" class="btn-carrossel" data-lang="pt">Saber Mais</a>
+                                    <a href="#contacto" class="btn-carrossel" data-lang="en">Learn More</a>
+                                </div>
+                                <div class="carrossel-imagem">
+                                    <img src="./img/solar-hibrido.jpg" alt="Sistema híbrido solar" onerror="this.src='./img/placeholder.svg'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botões de navegação -->
+                    <button class="carrossel-btn carrossel-prev" aria-label="Slide anterior">❮</button>
+                    <button class="carrossel-btn carrossel-next" aria-label="Próximo slide">❯</button>
+
+                    <!-- Indicadores -->
+                    <div class="carrossel-indicadores">
+                        <span class="indicador active" data-slide="0"></span>
+                        <span class="indicador" data-slide="1"></span>
+                        <span class="indicador" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SOBRE ================= -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title" data-lang="pt">Sobre a Empresa</h2>
+                <h2 class="section-title" data-lang="en">About Us</h2>
+                
+                <p class="section-text" data-lang="pt">
+                    A Marta Energia Renovável é uma empresa jovem e inovadora,
+                    especializada em soluções sustentáveis que reduzem custos
+                    energéticos e contribuem para a preservação do meio ambiente.
+                    Trabalhamos com tecnologia moderna e equipas qualificadas
+                    para garantir eficiência, segurança e qualidade.
+                </p>
+                <p class="section-text" data-lang="en">
+                    Marta Energia Renovável is a young and innovative company,
+                    specialized in sustainable solutions that reduce energy costs
+                    and contribute to environmental preservation.
+                    We work with modern technology and qualified teams
+                    to ensure efficiency, safety and quality.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= SERVIÇOS ================= -->
+        <section id="servicos" class="section section-light">
+            <div class="container">
+                <h2 class="section-title" data-lang="pt">Nossos Serviços</h2>
+                <h2 class="section-title" data-lang="en">Our Services</h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3 data-lang="pt">Instalação de Painéis Solares</h3>
+                        <h3 data-lang="en">Solar Panel Installation</h3>
+                        <p data-lang="pt">Sistemas eficientes para residências e empresas.</p>
+                        <p data-lang="en">Efficient systems for homes and businesses.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 data-lang="pt">Manutenção Técnica</h3>
+                        <h3 data-lang="en">Technical Maintenance</h3>
+                        <p data-lang="pt">Garantimos o máximo desempenho do seu sistema solar.</p>
+                        <p data-lang="en">We guarantee maximum performance of your solar system.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 data-lang="pt">Consultoria Energética</h3>
+                        <h3 data-lang="en">Energy Consulting</h3>
+                        <p data-lang="pt">Análise personalizada para redução de custos.</p>
+                        <p data-lang="en">Personalized analysis for cost reduction.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 data-lang="pt">Projetos Personalizados</h3>
+                        <h3 data-lang="en">Custom Projects</h3>
+                        <p data-lang="pt">Soluções sob medida para cada necessidade.</p>
+                        <p data-lang="en">Tailor-made solutions for each need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALERIA ================= -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <h2 class="section-title" data-lang="pt">Projetos Realizados</h2>
+                <h2 class="section-title" data-lang="en">Completed Projects</h2>
+                <div class="gallery-grid">
+                    <!-- Futuras imagens aqui -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACTO ================= -->
+        <section id="contacto" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title" data-lang="pt">Entre em Contacto</h2>
+                <h2 class="section-title" data-lang="en">Contact Us</h2>
+                
+                <p data-lang="pt">📞 WhatsApp: +258 84 717 4400</p>
+                <p data-lang="en">📞 WhatsApp: +258 84 717 4400</p>
+                
+                <p data-lang="pt">📧 Email: contacto@martaenergia.co.mz</p>
+                <p data-lang="en">📧 Email: contacto@martaenergia.co.mz</p>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-    </a>
-        <p>© 2026 Marta Energia Renovável. Todos os direitos reservados.</p>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <p data-lang="pt">© 2026 Marta Energia Renovável. Todos os direitos reservados.</p>
+            <p data-lang="en">© 2026 Marta Energia Renovável. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- ================= POPUP DE IDIOMA ================= -->
+    <div id="language-popup" class="language-popup">
+    <class="popup-content">
+        <h2 data-lang="pt">🌍 Escolha o seu idioma</h2>
+        <h2 data-lang="en">🌍 Choose your language</h2>
+        
+        <div class="language-options">
+            <button class="lang-btn" data-lang="pt">
+                <span class="flag">🇵🇹</span>
+                Português
+            </button>
+            
+            <button class="lang-btn" data-lang="en">
+                <span class="flag">🇬🇧</span>
+                English
+            </button>
+        </div>
+        
+        <p class="remember-note" data-lang="pt">✓ O site será apresentado no idioma selecionado</p>
+        <p class="remember-note" data-lang="en">✓ The website will be shown in the selected language</p>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
 </body>
 </html>
